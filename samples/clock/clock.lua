@@ -56,7 +56,31 @@ local monthsIndex = {
 }
 
 function startClock()
+  if ui.date ~= nil and ui.time ~= nil then
+    tickClock()
+  end
+end
+
+function tickClock()
   local today = window.Date.new()
+  local dayOfMonth, dayIndex, monthIndex, year, h, m, s =
+    formatTimeNumber(today:getDate()),
+    today:getDay(),
+    today:getMonth(),
+    today:getFullYear(),
+    today:getHours(),
+    formatTimeNumber(today:getMinutes()),
+    formatTimeNumber(today:getSeconds())
+
+  local day, month =
+    days[extractDayAlias(dayIndex)],
+    months[extractMonthDalias(monthIndex)]
+
+  ui.date.innerHTML = string.format("%s. %s %s %s", day, dayOfMonth, month, year)
+  ui.time.innerHTML = string.format("%s : %s : %s", h, m, s)
+
+  requestAnimationFrame(tickClock)
+
 end
 
 function extractDayAlias(rank)
@@ -75,3 +99,4 @@ function formatTimeNumber(num)
 end
 
 startClock()
+print("coucou")
