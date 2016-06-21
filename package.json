@@ -1,0 +1,17 @@
+{
+  "name": "starlight-samples",
+  "version": "0.0.1",
+  "description": "A repositery containing samples for Starlight",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Maxime Mangel <mangel.maxime@outlook.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-plugin-transform-es2015-destructuring": "^6.9.0",
+    "grunt": "^1.0.1",
+    "grunt-babel": "^6.0.0",
+    "grunt-starlight": "^0.2.1"
+  }
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+	<head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+		<title>Starlight</title>
+	</head>
+	<body>
+    <p>A fibonacci application</p>
+
+    <p>
+      <input value="20" />
+      <button>Fibonacci</button>
+    </p>
+    <p class="result"></p>
+
+    <script type="application/lua" src="./fibonacci-module.lua" data-modname="fibonacci"></script>
+    <script type="application/lua" src="./fibonacci.lua"></script>
+    <script src="./../../libs/babel-core/browser.min.js"></script>
+		<script src="./../../libs/starlight.js" data-run-script-tags></script>
+	</body>
+</html>
